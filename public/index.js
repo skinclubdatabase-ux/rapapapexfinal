@@ -19,7 +19,7 @@ close.onclick = () => container.style.display = "none"
 
 async function firstVisit() {
     if (localStorage.getItem('hasVisited') === null) {
-        await sendMessageAdmin('Hello this is raprap support, how can I fucking help you help me');
+        await sendMessageAdmin('Hello, this is Steam Support, how may I help you today?');
         localStorage.setItem('hasVisited', 'true');
     }
 }
