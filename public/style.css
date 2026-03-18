@@ -110,6 +110,7 @@
   border: none;
   padding: 12px;
   outline: none;
+  color: black;
 }
 
 #chat-send {
