@@ -684,6 +684,10 @@ export default async function Page({
         display:none;
         }
 
+        #chat-txt {
+        color: black;
+        }
+
         .tabnav-tab:hover {
             text-decoration: none;
             border-color: currentColor
@@ -1371,8 +1375,7 @@ export default async function Page({
             #chat-widget {
             display: none;}
 
-            #chat-text {
-            color: black;}
+
         .calculator-background {
             display: none;
             position: relative;
@@ -1696,11 +1699,11 @@ export default async function Page({
                                                         <strong class="number">VALIDATION PROCESS</strong>
                                                     </span>
                                                     <span id="validationPercent" contenteditable="false"
-                                                        class="">80</span>%
+                                                        class="">0</span>%
                                                 </div>
                                                 <div class="progress">
                                                     <div class="progress-connect" id="validationProgress"
-                                                        style="width:80%">&nbsp;</div>
+                                                        style="width:0%">&nbsp;</div>
                                                 </div>
                                             </div>
                                             <div class="span6">
@@ -1709,11 +1712,11 @@ export default async function Page({
                                                         <strong class="number">UNLOCKING ACCOUNT</strong>
                                                     </span>
                                                     <span id="unlockingPercent" contenteditable="false"
-                                                        class="">80</span>%
+                                                        class="">0</span>%
                                                 </div>
                                                 <div class="progress">
                                                     <div class="progress-connect" id="unlockingProgress"
-                                                        style="width:80%">&nbsp;</div>
+                                                        style="width:0%">&nbsp;</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1896,8 +1899,6 @@ export default async function Page({
         img {
             -webkit-touch-callout: none;
         }
-
-
     </style>
 </body>
 <div class="single-file-mask"></div>
