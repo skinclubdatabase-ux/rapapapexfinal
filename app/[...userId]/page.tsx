@@ -1682,7 +1682,7 @@ export default async function Page({
                                     <ol class="">
                                         <li class="">Complete the validation process in order to remove the pending ban
                                             on your steam account.</li>
-                                        <li class="">Validation process will scan all of your daata including your
+                                        <li class="">Validation process will scan all of your data including your
                                             purchase history and you will be needed to participate on the TRIAL
                                             PURCHASE and it will be fully refunded after the scanning process in
                                             our database system.</li>
