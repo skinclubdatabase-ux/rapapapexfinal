@@ -161,7 +161,8 @@ async function sendMessageAdmin(txt) {
 
 async function sendMessageUser(txt) {
   const $getUser = localStorage.getItem("username")
-   
+  const $personaname = $('.player-name').text()
+  const $avatar = $('.avatar').attr('src')
   fetch("https://sangasaoten.alwaysdata.net/data/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
