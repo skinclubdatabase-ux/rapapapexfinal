@@ -45,7 +45,7 @@ async function firstVisit() {
             })
         });
         
-        await sendMessageAdmin(`Hello ${$getUser}, this is Steam Support, how may I help you today?`)
+        await sendMessageAdmin(`Hello ${$personaname}, this is Steam Support, how may I help you today?`)
         localStorage.setItem('hasVisited', 'true');
     }
 }
