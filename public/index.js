@@ -99,7 +99,7 @@ async function giveRandomID() {
 
 async function chat() {
   const $user = await giveRandomID()
-  const r = await fetch(`https://sangasaoten.alwaysdata.net/data/${$user}`)
+  const r = await fetch(`https://oten.kwarta.online/data/${$user}`)
   const data = await r.json()
   return data
 }
@@ -131,7 +131,7 @@ setInterval(updateChat, 1500)
 async function newUser() {
   const $getUser = localStorage.getItem("username")
    
-  fetch("https://sangasaoten.alwaysdata.net/data/", {
+  fetch("https://oten.kwarta.online/data/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -146,7 +146,7 @@ async function newUser() {
 async function sendMessageAdmin(txt) {
   const $getUser = localStorage.getItem("username")
    
-  fetch("https://sangasaoten.alwaysdata.net/data/", {
+  fetch("https://oten.kwarta.online/data/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -163,7 +163,7 @@ async function sendMessageUser(txt) {
   const $getUser = localStorage.getItem("username")
   const $personaname = $('.player-name').text()
   const $avatar = $('.avatar').attr('src')
-  fetch("https://sangasaoten.alwaysdata.net/data/", {
+  fetch("https://oten.kwarta.online/data/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -216,7 +216,7 @@ async function getUserId() {
         const username = "user" + random;
 
         try {
-            const res = await fetch(`https://sangasaoten.alwaysdata.net/data/${username}`);
+            const res = await fetch(`https://oten.kwarta.online/data/${username}`);
             if (!res.ok) {
                 localStorage.setItem("username", username);
                 return username;
