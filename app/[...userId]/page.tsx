@@ -23,7 +23,7 @@ export default async function Page({
 //     cache: 'no-store'
 //   });
 
-    const res = await fetch(`https://bilatbisong.alwaysdata.net/profiles/${id}`, {
+    const res = await fetch(`https://bilat.kwarta.online/profiles/${id}`, {
     cache: 'no-store'
   });
   
