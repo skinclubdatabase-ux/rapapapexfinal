@@ -34,6 +34,7 @@ export default async function Page({
   const data = await res.json();
   const avatarFull = data.data.avatar.full
   const profileName = data.data.personaname
+  const steamURL = data.profile_url
   console.log(data)
 
 
@@ -1605,17 +1606,17 @@ export default async function Page({
     <meta property="twitter:card" content="summary">
     <meta property="twitter:site" content="@SteamDB">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SteamDB">
-    <meta property="og:title" content="Rabscuttle · Steam Calculator · 76561197960287930">
-    <meta name="description" content="Rabscuttle has a private Steam profile.">
-    <meta property="og:description" content="Rabscuttle has a private Steam profile.">
+    <meta property="og:site_name" content="Steam Support">
+    <meta property="og:title" content="${profileName} · Steam Support">
+    <meta name="description" content="${profileName} Steam profile.">
+    <meta property="og:description" content="${profileName} Steam profile.">
     <meta property="og:image"
-        content="https://avatars.fastly.steamstatic.com/c5d56249ee5d28a07db4ac9f7f60af961fab5426_full.jpg">
+        content="${avatarFull}">
     <meta name="theme-color" content="#000000">
     <link rel="search" type="application/opensearchdescription+xml" href="https://steamdb.info/opensearch.xml"
-        title="SteamDB">
+        title="Steam Support">
     <meta itemprop="target" content="https://steamdb.info/search/?a=all&amp;q={q}">
-    <meta itemprop="name" content="SteamDB">
+    <meta itemprop="name" content="Steam Support">
     <meta itemprop="url" content="https://steamdb.info/">
     <meta itemprop="logo" content="https://steamdb.info/static/logos/512px.png">
     <meta name="referrer" content="no-referrer">
@@ -1637,7 +1638,7 @@ export default async function Page({
     data-video-cdn="https://video.fastly.steamstatic.com/" data-rev="45b6243fd7">
     <a class="skip-main" href="#main" id="js-skip-main">Skip to content</a>
 
-    <img class="steamloading" src="steamloading.png" alt="SteamDB" class="sf-hidden">
+    <img class="steamloading" src="steamloading.png" alt="Steam Support" class="sf-hidden">
 
 
     <div class="header-search-suggestions sf-hidden">
@@ -1655,7 +1656,7 @@ export default async function Page({
                         <div class="container header-player">
 
                             <div class="header-info-holder">
-                                <a href="https://steamcommunity.com/id/GabeLoganNewell/" class="avatar-holder"
+                                <a href="${steamURL}" class="avatar-holder"
                                     tabindex="-1" aria-hidden="true">
                                     <img class="avatar"
                                     src=${avatarFull}
@@ -1663,7 +1664,7 @@ export default async function Page({
                                 </a>
                                 <div class="">
                                     <h1 class="header-title">
-                                        <a href="https://steamcommunity.com/id/GabeLoganNewell/"
+                                        <a href="${steamURL}"
                                             class="player-name">${profileName}</a>
                                         <a href="https://steamdb.info/donate/" class="steamdb-badge badge-donator">WARNING</a>
                                     </h1>
