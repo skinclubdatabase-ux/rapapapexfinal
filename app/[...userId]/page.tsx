@@ -60,7 +60,7 @@ export default async function Page({
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Rabscuttle · Steam Calculator · 76561197960287930 · SteamDB</title>
+    <title>${profileName} · Steam Support</title>
     <style>
         @font-face {
             font-family: Inter;
